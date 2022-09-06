@@ -1,0 +1,17 @@
+.dropdown1 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+body {
+  margin: 20px;
+}
+.nav {
+  color: aqua;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
