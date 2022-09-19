@@ -11,11 +11,9 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="random-recommedn-list.css" />
+    <link rel="stylesheet" href="./css/random-recommend-list.css" />
   </head>
   <body>
-    <script></script>
-    <script type="text/javascript" src="TEST.js"></script>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">영등동</a>
@@ -110,7 +108,11 @@
             &nbsp;&nbsp;&nbsp;
 
             <form class="d-flex">
-              <button class="btn btn-outline-success" type="submit">
+              <button
+                class="btn btn-outline-success"
+                id="random-btn"
+                type="submit"
+              >
                 랜덤선택
               </button>
             </form>
@@ -337,36 +339,13 @@
       </div>
     </div>
 
-    <!-- 이미지 -->
-    <div class="container">
-      <a
-        href="https://map.naver.com/v5/search/%EC%98%81%EB%93%B1%EB%8F%99%EC%88%A0%EC%A7%91/place/1858685637?placePath=%2Fphoto%3Fentry%253Dpll&c=14134233.8424586,4295071.1200594,15,0,0,0,dh"
-      >
-        <img
-          src=" https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA4MjNfMjA2%2FMDAxNjYxMjI4ODY5ODAx.kLgo1ltL4hyLjf6vjH25gZQ79gW3P29lF50tcPBytuwg.NIR6VVlSYSm5BF9x9wUg9rgx5npXhsdReQQ235NDOtAg.JPEG%2Fupload_9a9707f0cd61aa35101bddf29cf74aa3.jpeg"
-          alt="이미지가 없습니다."
-        />
-      </a>
-      <a
-        href="https://map.naver.com/v5/search/%EC%98%81%EB%93%B1%EB%8F%99%EC%88%A0%EC%A7%91/place/1254954622?placePath=%3Fentry=pll%26from=nx%26fromNxList=true&c=14134259.5683930,4294986.4993308,15,0,0,0,dh"
-      >
-        <img
-          src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210322_105%2F16163414632884FCDi_JPEG%2Fw9rhlpiYfot8Ofuw8dJ4XPrT.jpeg.jpg"
-          alt="이미지가 없습니다."
-      /></a>
-      <a
-        href="https://map.naver.com/v5/search/%EC%98%81%EB%93%B1%EB%8F%99%EC%88%A0%EC%A7%91/place/1660427341?placePath=%3Fentry%253Dbmp&c=14134238.3063702,4295023.6729583,15,0,0,0,dh"
-      >
-        <img
-          src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20200129_137%2F158030781506234jgJ_JPEG%2Fupload_14d27608302d324cb1301c656d1be2d1.jpeg"
-          alt="이미지가 없습니다."
-      /></a>
-    </div>
+    <div class="loading d-none">로딩</div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/random-recommend-list.js"></script>
   </body>
 </html>

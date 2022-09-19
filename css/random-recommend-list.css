@@ -15,3 +15,11 @@ img {
   width: 300px;
   height: 300px;
 }
+
+.loading {
+  font-size: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
