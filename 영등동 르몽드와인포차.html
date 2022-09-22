@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오늘|한잔어때?</title>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script></head
+  ><!--부트스트랩-->
+  <style>
+    body {
+      font-family: Arial;
+      margin: 10;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Position the image container (needed to position the left and right arrows) */
+    .container {
+      position: relative;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+      cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* Container for image text */
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Six columns side by side */
+    .column {
+      float: left;
+      width: 16.66%;
+    }
+
+    /* Add a transparency effect for thumnnail images */
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <header
+      class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark"
+    >
+      <div class="container-fluid d-flex align-items-center">
+        <h1 class="fs-4 text-white mb-0">
+          오늘은 여기서 한잔어때?
+        </h1>
+        <a href="category.html" class="ms-auto link-light" hreflang="ar"
+          >HomePage</a
+        >
+      </div>
+    </header>
+    <div class="container">
+      <!--scr=""안에 1~6번 순서대로 사진넣고 width: %에서 크기맞추기-->
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <div style="text-align:center">
+        <img
+          src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjFfMjQ3%2FMDAxNjIxNTg2ODUyMTQ3.PAIm-efoGu0RUnONVM_gM0rcKV8skIMLhpWw4HCZX_8g.6idIdNSRM-wJg9AnXAq9ZgJ9l8AXYg-Z127W9ZETscUg.JPEG.crapassoo%2FKakaoTalk_20210521_174547637.jpg"
+          style="width: 25%"
+        />
+      </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <div style="text-align:center">
+        <img
+          src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA2MTlfMjEg%2FMDAxNjU1NjA0MDMyMzEy.QIbKngo6mF3JMcDBN1DJX-WWjCTpPHQu5eMMDA9Y4xwg.TVXxTwzgWAv-d4EAiQlBv3TZeRATPgMqC1a97Xz7bAIg.JPEG.songmi0105%2FIMG_0010.jpg"
+          style="width: 35%"
+        />
+      </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <div style="text-align:center">
+        <img
+          src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MThfMTc2%2FMDAxNjU4MTI3NjYzNDM5.pN3K94hX2d8MTHtz7_i44hfVtwbjjuN-NsJVjWVX21Ag.39URy9PutQ6ZoiaXiv5H01SPwHWKhTgHg9n2jRkoDhwg.JPEG.teach5620%2F20220512%25A3%25DF174039.jpg"
+          style="width: 45%"
+        />
+      </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <div style="text-align:center">
+        <img
+          src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjFfNTAg%2FMDAxNjIxNTg2NjE4OTE0.40a1TrMf8BwNtldXX9CZRu4LqicQ-zq5sM1Y6G6pOzQg.IXLx6X4AI7v_Pqzv0GyWRJDv11bAr1pZowLgs2exL9Ag.JPEG.crapassoo%2FKakaoTalk_20210521_174132336.jpg"
+          style="width: 35%"
+        />
+      </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext" style="margin-left: 200px">5 / 6</div>
+        <div style="text-align:center">
+        <img
+          src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjFfMTA1%2FMDAxNjIxNTg2NjE4NzIz.qDkQ75RJPN0_iCAu5MuwbwANh_AK0yInqe71cjZgwR4g.T_PI6YHU2UPTQzzCSZoustv-nBu-co3giQ6fjP6ji2gg.JPEG.crapassoo%2FKakaoTalk_20210521_174131407.jpg"
+          style="width: 35%"
+
+        />
+      </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <div style="text-align:center">
+        <img
+          src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjFfMTA4%2FMDAxNjIxNTg2NjE3MDk5.zKYW6YdEN6oXq9TBroz3FL2t3fMUpl2E9jgmx-RJ1mkg.wm089PrpHAPaLl8S2B6MTxkXJubW_JgYPkrhyCDDYP0g.JPEG.crapassoo%2FKakaoTalk_20210521_174122020.jpg"
+          style="width: 35%"
+        />
+      </div>
+    </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <!--scr=""안에 1~6번 순서대로 사진넣기-->
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjFfMjQ3%2FMDAxNjIxNTg2ODUyMTQ3.PAIm-efoGu0RUnONVM_gM0rcKV8skIMLhpWw4HCZX_8g.6idIdNSRM-wJg9AnXAq9ZgJ9l8AXYg-Z127W9ZETscUg.JPEG.crapassoo%2FKakaoTalk_20210521_174547637.jpg"
+            style="width: 110%"
+            onclick="currentSlide(1)"
+            alt="1"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA2MTlfMjEg%2FMDAxNjU1NjA0MDMyMzEy.QIbKngo6mF3JMcDBN1DJX-WWjCTpPHQu5eMMDA9Y4xwg.TVXxTwzgWAv-d4EAiQlBv3TZeRATPgMqC1a97Xz7bAIg.JPEG.songmi0105%2FIMG_0010.jpg"
+            style="width: 110%"
+            onclick="currentSlide(2)"
+            alt="2"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjFfNTAg%2FMDAxNjIxNTg2NjE4OTE0.40a1TrMf8BwNtldXX9CZRu4LqicQ-zq5sM1Y6G6pOzQg.IXLx6X4AI7v_Pqzv0GyWRJDv11bAr1pZowLgs2exL9Ag.JPEG.crapassoo%2FKakaoTalk_20210521_174132336.jpg"
+            style="width: 110%"
+            onclick="currentSlide(3)"
+            alt="3"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjFfMTA1%2FMDAxNjIxNTg2NjE4NzIz.qDkQ75RJPN0_iCAu5MuwbwANh_AK0yInqe71cjZgwR4g.T_PI6YHU2UPTQzzCSZoustv-nBu-co3giQ6fjP6ji2gg.JPEG.crapassoo%2FKakaoTalk_20210521_174131407.jpg"
+            style="width: 110%"
+            onclick="currentSlide(4)"
+            alt="4"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjFfMTA4%2FMDAxNjIxNTg2NjE3MDk5.zKYW6YdEN6oXq9TBroz3FL2t3fMUpl2E9jgmx-RJ1mkg.wm089PrpHAPaLl8S2B6MTxkXJubW_JgYPkrhyCDDYP0g.JPEG.crapassoo%2FKakaoTalk_20210521_174122020.jpg"
+            style="width: 110%"
+            onclick="currentSlide(5)"
+            alt="5"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MThfMTc2%2FMDAxNjU4MTI3NjYzNDM5.pN3K94hX2d8MTHtz7_i44hfVtwbjjuN-NsJVjWVX21Ag.39URy9PutQ6ZoiaXiv5H01SPwHWKhTgHg9n2jRkoDhwg.JPEG.teach5620%2F20220512%25A3%25DF174039.jpg"
+            style="width: 100%"
+            onclick="currentSlide(6)"
+            alt="6"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+      }
+    </script>
+    <!---->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+    <!---->
+    <hr />
+
+    <div class="row">
+      <!--행나누기-->
+      <div class="col-5">
+        <div style="margin-left:300px">
+        <div class="card" style="min-width: 100px " >
+          <div class="card-body" >
+            <!--img scr=""안에 술집외관 이미지주소넣기-->
+            <img
+              src="https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190126_216%2F1548504855540E1Y5b_JPEG%2FsM79m3m5rwTrwDmJuAP411D9.jpeg.jpg"
+              class="card-img-top"
+              alt="123."
+            /><!--술집 이름 [  ]칸 안에 작성-->
+            <h5 class="card-title">[ 르몽드 와인 포차 ]</h5>
+
+            <!--술집소개 p태그 사이에 작성-->
+            <p class="card-text">  </p>
+
+            <!--아래href: 술집 사이트or네이버검색창 링크-->
+            <a
+              href="https://map.naver.com/v5/search/%EC%98%81%EB%93%B1%EB%8F%99%20%EB%A5%B4%EB%AA%BD%EB%93%9C%EC%99%80%EC%9D%B8/place/1219358925?c=14134141.7144480,4295021.7613258,15,0,0,0,dh&isCorrectAnswer=true"
+              class="btn btn-primary"
+              >링크 바로가기</a
+            >
+          </div>
+        </div>
+      </div>
+      </div>
+          <!--메뉴판-->
+      <div class="col-3" style="padding: 50px 60px 100px">
+        <div style="padding-left: 60px"><가격표></div>
+      <li>리코타치즈 샐러드:18,000</li>
+      <li>카프레제:15,000</li>  
+      <li>찹스테이크+볶음밥:19,000</li>
+      <li>갈릭버터 새우구이:19,000</li>
+      <li>멘보샤:9,000</li>
+      <li>치즈 샐러드(실속):10,000</li>
+      <li>치즈 샐러드(스페셜):18,000</li>
+      <li>과카몰리&나쵸:9,000</li>
+      <li>미니모듬치즈:8,000</li>
+      </div>
+
+      
+    
+   
+     <div class="col-2">
+      
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+      ></script>
+
+      <!--지도 넣는칸-->
+      <!--지도 html받는법-> 카카오맵에서 장소검색후 공유버튼 클릭->html태그복사 클릭후 여기서부터 지우고 붙여넣기**지도 가로세로넓이300으로맞추기-->
+
+<!-- * 카카오맵 - 지도퍼가기 -->
+<!-- 1. 지도 노드 -->
+<div id="daumRoughmapContainer1663724226867" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+<!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+<!-- 3. 실행 스크립트 -->
+<script charset="UTF-8">
+	new daum.roughmap.Lander({
+		"timestamp" : "1663724226867",
+		"key" : "2brx5",
+		"mapWidth" : "300",
+		"mapHeight" : "300"
+	}).render();
+</script>
+
+
+<!--지도스크립트 끝-->
+      
+      <div>
+         <!--술집 세부사항 작성칸-->
+     <li> 전북 익산시 하나로11길 32-1 </li>
+     <li> 17:00시~04:00시 </li>
+     <li> 0507-1431-8930 </li>
+     <li> 포장/배달 가능 </li>
+
+        </ul>
+      </div>
+  </div>
+  </body>
+</html>

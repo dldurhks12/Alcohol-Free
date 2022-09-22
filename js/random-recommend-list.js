@@ -14,14 +14,15 @@ function click3() {
 
 document.getElementById("random-btn").addEventListener("click", () => {
   const row = document.querySelector(".row");
-  const load = document.querySelector(".loading");
+  const load = document.querySelector(".loader");
   row.classList.add("d-none");
   load.classList.remove("d-none");
 
   // TODO: 조건에 맞는 랜덤인지 확인하게
+
   setTimeout(() => {
     row.classList.remove("d-none");
 
     location.href = ""; // 넘어갈 랜덤
-  }, 3000);
+  }, 7000);
 });
