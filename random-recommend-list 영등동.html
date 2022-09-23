@@ -32,96 +32,53 @@
           <ul class="navbar-nav">
             <li class="nav-item"></li>
 
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link active dropdown-toggle"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+            <div class="form-floating" name="category">
+              <select
+                class="form-select"
+                id="ageSelect"
+                aria-label="Floating label select example"
               >
-                나이대별
-              </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <li><a class="dropdown-item" href="#">20대</a></li>
-                <li><a class="dropdown-item" href="#">30대</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">40대</a>
-                </li>
-              </ul>
-            </li>
+                <option selected>선택하세요</option>
+                <option value="1">20대</option>
+                <option value="2">30대</option>
+                <option value="3">40대</option>
+              </select>
+              <label for="ageSelect">나이대별 </label>
+            </div>
+            &nbsp;&nbsp;&nbsp;
 
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link active dropdown-toggle"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+            <div class="form-floating" name="category">
+              <select
+                class="form-select"
+                id="themeSelect"
+                aria-label="Floating label select example"
               >
-                술집 테마
-              </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <li>
-                  <a class="dropdown-item" href="#">간단하게 술먹는 날</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">맛있는 음식 먹고싶은날</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">먹고 죽는날</a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link active dropdown-toggle"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                거리별
-              </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
+                <option selected>선택하세요</option>
+                <option value="1">간단하게 술먹고싶은날</option>
+                <option value="2">먹고죽는날</option>
+                <option value="3">안주 먹고싶은날</option>
+              </select>
+              <label for="themeSelect">술집 테마 </label>
+            </div>
 
             &nbsp;&nbsp;&nbsp;
 
-            <form class="d-flex">
+            <div class="d-flex">
               <button
                 class="btn btn-outline-success"
                 id="random-btn"
                 type="submit"
               >
-                랜덤선택
+                랜덤추천
               </button>
-            </form>
+            </div>
           </ul>
         </div>
       </div>
     </nav>
 
     <br />
+
     <!-- img 속성 안에 있는 id와 onclick 메서드 이름은 서로 다르게 작성해 주세요. -->
 
     <div class="row">
@@ -132,7 +89,6 @@
             height="250"
             src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA4MjNfMjA2%2FMDAxNjYxMjI4ODY5ODAx.kLgo1ltL4hyLjf6vjH25gZQ79gW3P29lF50tcPBytuwg.NIR6VVlSYSm5BF9x9wUg9rgx5npXhsdReQQ235NDOtAg.JPEG%2Fupload_9a9707f0cd61aa35101bddf29cf74aa3.jpeg"
             id="img2"
-            onclick="click2()"
             class="card-img-top"
             alt="영등동 술집"
           />
@@ -140,7 +96,9 @@
             <h5 class="card-title">주기</h5>
             <p class="card-text">전북 익산시 무왕로 15길 11</p>
             <br />
-            <a href="영등동주기.html" class="btn btn-primary">상세정보</a>
+            <a href="detail-page\영등동\영등동주기.html" class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
@@ -152,7 +110,6 @@
             height="250"
             src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191205_223%2F15755238823977cMDv_JPEG%2FEchDv7Icw9nGsOo58WHmQM2i.jpg"
             id="img2"
-            onclick="click2()"
             class="card-img-top"
             alt="영등동 술집"
           />
@@ -160,7 +117,9 @@
             <h5 class="card-title">구기</h5>
             <p class="card-text">전북 익산시 고봉로26길 34 1층</p>
             <br />
-            <a href="영등동구기.html" class="btn btn-primary">상세정보</a>
+            <a href="detail-page\영등동\영등동구기.html" class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
@@ -172,7 +131,6 @@
             height="250"
             src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA3MjBfMjUy%2FMDAxNTMyMDcxMjgxNzA2.kiUDlkyXZGGLThr-YaSS_9RCV1UyxeKaFaEz662IbyYg.hOEBEgeYkSWRAyhCrwKGPu6XgCl20ukFAli7WBHC9K0g.JPEG.euna_roong%2F20180718_193414.jpg"
             id="img3"
-            onclick="click3()"
             class="card-img-top"
             alt="영등동 술집"
           />
@@ -180,7 +138,11 @@
             <h5 class="card-title">역전할머니맥주</h5>
             <p class="card-text">전북 익산시 무왕로 15길 12-1</p>
             <br />
-            <a href="영등동역전할맥.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동역전할맥.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
@@ -198,13 +160,16 @@
             <h5 class="card-title">노군꼬치</h5>
             <p class="card-text">전북 익산시 무왕로15길 1 1층</p>
             <br />
-            <a href="영등동 노군꼬치.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동 노군꼬치.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
 
       <p></p>
-
       <div class="col-3">
         <div class="card">
           <img
@@ -218,7 +183,9 @@
             <h5 class="card-title">대장군막걸리</h5>
             <p class="card-text">전북 익산시 고봉로 28길 12</p>
             <br />
-            <a href="영등동 대장군막걸리.html" class="btn btn-primary"
+            <a
+              href="detail-page\영등동\영등동 대장군막걸리.html"
+              class="btn btn-primary"
               >상세정보</a
             >
           </div>
@@ -238,7 +205,9 @@
             <h5 class="card-title">누룩꽃피는날</h5>
             <p class="card-text">전북 익산시 하나로 11길 25 1층</p>
             <br />
-            <a href="영등동 누룩꽃피는날.html" class="btn btn-primary"
+            <a
+              href="detail-page\영등동\영등동 누룩꽃피는날.html"
+              class="btn btn-primary"
               >상세정보</a
             >
           </div>
@@ -258,7 +227,11 @@
             <h5 class="card-title">익태원</h5>
             <p class="card-text">전북 익산시 하나로 11길 36-7</p>
             <br />
-            <a href="영등동 익태원.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동 익태원.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
@@ -276,7 +249,11 @@
             <h5 class="card-title">한신포차</h5>
             <p class="card-text">전북익산시 하나로 11길 37 1층</p>
             <br />
-            <a href="영등동 한신포차.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동 한신포차.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
@@ -296,7 +273,11 @@
             <h5 class="card-title">이탈</h5>
             <p class="card-text">전북 익산시 무왕로 17길 44-4 1층</p>
             <br />
-            <a href="영등동 이탈.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동 이탈.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
@@ -314,7 +295,11 @@
             <h5 class="card-title">대작</h5>
             <p class="card-text">전북 익산시 무왕로 15길 7 1층</p>
             <br />
-            <a href="영등동 대작.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동 대작.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
@@ -332,10 +317,15 @@
             <h5 class="card-title">장미맨숀</h5>
             <p class="card-text">전북 익산시 하나로11길 23</p>
             <br />
-            <a href="영등동 장미맨숀.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동 장미맨숀.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
+
       <div class="col-3">
         <div class="card">
           <img
@@ -349,10 +339,15 @@
             <h5 class="card-title">두부키친</h5>
             <p class="card-text">전북 익산시 하나로11길 23</p>
             <br />
-            <a href="영등동 두부키친.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동 두부키친.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
+
       <p></p>
       <div class="col-3">
         <div class="card">
@@ -367,12 +362,15 @@
             <h5 class="card-title">크라운 호프</h5>
             <p class="card-text">전북 익산시 무왕로15길 12 1층</p>
             <br />
-            <a href="영등동 크라운호프.html" class="btn btn-primary"
+            <a
+              href="detail-page\영등동\영등동 크라운호프.html"
+              class="btn btn-primary"
               >상세정보</a
             >
           </div>
         </div>
       </div>
+
       <div class="col-3">
         <div class="card">
           <img
@@ -386,10 +384,15 @@
             <h5 class="card-title">투다리</h5>
             <p class="card-text">전북 익산시 고봉로34길 43</p>
             <br />
-            <a href="영등동 투다리.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동 투다리.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
+
       <div class="col-3">
         <div class="card">
           <img
@@ -403,10 +406,15 @@
             <h5 class="card-title">개집비어</h5>
             <p class="card-text">전북 익산시 하나로11길 31</p>
             <br />
-            <a href="영등동 개집비어.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동 개집비어.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
+
       <div class="col-3">
         <div class="card">
           <img
@@ -420,11 +428,16 @@
             <h5 class="card-title">공룡슈퍼</h5>
             <p class="card-text">전북 익산시 하나로11길 27</p>
             <br />
-            <a href="영등동 공룡슈퍼.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동 공룡슈퍼.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
       <p></p>
+
       <div class="col-3">
         <div class="card">
           <img
@@ -438,12 +451,15 @@
             <h5 class="card-title">르몽드 와인포차</h5>
             <p class="card-text">전북 익산시 하나로11길 32-1</p>
             <br />
-            <a href="영등동 르몽드와인포차.html" class="btn btn-primary"
+            <a
+              href="detail-page\영등동\영등동 르몽드와인포차.html"
+              class="btn btn-primary"
               >상세정보</a
             >
           </div>
         </div>
       </div>
+
       <div class="col-3">
         <div class="card">
           <img
@@ -457,10 +473,15 @@
             <h5 class="card-title">청춘맥주</h5>
             <p class="card-text">전북 익산시 동서로43길 30-1</p>
             <br />
-            <a href="영등동 청춘맥주.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동 청춘맥주.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
+
       <div class="col-3">
         <div class="card">
           <img
@@ -474,10 +495,15 @@
             <h5 class="card-title">심야주방</h5>
             <p class="card-text">전북 익산시 하나로11길 36</p>
             <br />
-            <a href="영등동 심야주방.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동 심야주방.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
+
       <div class="col-3">
         <div class="card">
           <img
@@ -491,15 +517,18 @@
             <h5 class="card-title">다사랑치킨</h5>
             <p class="card-text">전북 익산시 고봉로26길 37</p>
             <br />
-            <a href="영등동다사랑치킨.html" class="btn btn-primary">상세정보</a>
+            <a
+              href="detail-page\영등동\영등동다사랑치킨.html"
+              class="btn btn-primary"
+              >상세정보</a
+            >
           </div>
         </div>
       </div>
     </div>
-
-    <!--<div class="loading d-none">로딩</div>-->
-    <div class="loader d-none"></div>
-
+    <div class="loading d-none"></div>
+    <!-- <div class="loader" style="margin: 300px 700px"></div> 
+    -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
