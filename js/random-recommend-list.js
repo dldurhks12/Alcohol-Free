@@ -12,17 +12,84 @@ function click3() {
   alert("click 3 ");
 }
 
+// 랜덤 버튼에 id값을 주고 해당 버튼에 click 이벤트를 줌
 document.getElementById("random-btn").addEventListener("click", () => {
+  const ageCategory = document.getElementById("ageSelect");
+  const themeCategory = document.getElementById("themeSelect");
+  console.log(ageCategory.value, themeCategory.value);
+  // class가 row로 준 애를 찾아서 row 변수에 담음
   const row = document.querySelector(".row");
-  const load = document.querySelector(".loader");
+  // class가 loading이라는 애를 찾아서 load 변수에 담음
+  const load = document.querySelector(".loading");
+  // row에 클래스 리스트에서 d-none이라는 애를 추가
+  //  - 여기서 d-none은 bootstrap에서 제공하는 클래스 중 하나인데 display: none; -> 안보이게
   row.classList.add("d-none");
+  // load에 클래스 리스트에서 d-none 제거
+  // - d-none이 없다면 상관없음 / 있다면 없어짐 -> 보이게 됨
   load.classList.remove("d-none");
 
   // TODO: 조건에 맞는 랜덤인지 확인하게
-
+  // setTimeout(함수, 시간ms) -> 시간ms이후에 함수 실행 (여기서 1000ms는 1초)
   setTimeout(() => {
     row.classList.remove("d-none");
-
-    location.href = ""; // 넘어갈 랜덤
-  }, 7000);
+    load.classList.add("d-none");
+    //location.href = ""; // 넘어갈 랜덤
+  }, 2000);
 });
+
+// 가게 데이터 변수화
+// 주의) 보통은 서버와 DB로 연동하지 이렇게 변수화해서 처리하지 않습니다.
+const places = [
+  ["주기", [1, 4]],
+  ["구기", [3]],
+  ["역전할머니맥주", [2, 3]],
+  ["다사랑치킨", [4]],
+  ["대장군막걸리", [5]],
+];
+
+/** 랜덤 찾기의 예시 코드
+document.querySelector(".btn").addEventListener("click", ({ target }) => {
+  // DOM에서 id값이 pick-place라는 애를 찾아서 text값을 ""빈값을 넣어라
+  document.getElementById("pick-place").innerText = "";
+  // selectList라는 빈 배열 생성 -> 선택한 요소(=체크박스)들을 넣기 위한 배열
+  const selectList = [];
+  // Name이 category라고 되어 있는 애들을 찾아서(여기에 elements라고 되어 있음 -> 복수)
+  // checkList변수에 넣어라
+  const checkList = document.getElementsByName("category");
+  // checkList 요소들을 개별적으로 보는데(반복) 그 요소를 check라고 해서 살펴보기
+  checkList.forEach((check) => {
+    // 만약에 check가 checked되었다면 (checkbox에 체크가 되었다면)
+    if (check.checked) {
+      // selectList 배열 변수에 check.value를 정수화(=parseInt)해서 넣어라(=push)
+      selectList.push(parseInt(check.value));
+    }
+  });
+  // suitablePlace 빈 배열 생성 -> 선택한 요소와 카테고리가 맞는 장소를 찾아서 담기 위한 배열
+  let suitablePlace = [];
+  // selectList를 살펴보는데 그 요소를 select라고 해서 살펴본다.
+  selectList.map((select) => {
+    // places를 살펴보는데 그 요소를 place라고 해서 살펴본다.
+    places.map((place) => {
+      // place의 첫번째 요소(배열에서는 0이 첫번째기에 엄연히 말하면 두번째)가 select값을 포함하고 있으면
+      if (place[1].includes(select) === true) {
+        // suitablePlace에 place를 넣어라
+        suitablePlace.push(place);
+      }
+    });
+  });
+  // uniqueSuitablePlace 배열 생성 -> 깊은 복사로 suitablePlace를 넣으면서 new Set으로 중복 제거
+  const uniqueSuitablePlace = [...new Set(suitablePlace)];
+  const loader = document.querySelector(".loader");
+  loader.classList.remove("d-none");
+  setTimeout(() => {
+    // 랜덤을 돌리는데 0 <= Math.random < 1(?)이니 uniqueSuitablePlace 배열의 길이만큼 곱해서
+    // 실수값을 버려주면 index값이 나옴
+    // 그 값을 pickIndex에 넣어줌
+    const pickIndex = Math.floor(Math.random() * uniqueSuitablePlace.length);
+    // pickPlace 변수에 랜덤으로 선택된 장소를 넣어줌
+    const pickPlace = uniqueSuitablePlace[pickIndex];
+    loader.classList.add("d-none");
+    document.getElementById("pick-place").innerText = pickPlace[1];
+  }, 3000);
+});
+*/
