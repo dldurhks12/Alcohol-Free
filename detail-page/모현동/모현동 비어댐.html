@@ -56,7 +56,7 @@
       width: auto;
       padding: 16px;
       margin-top: -50px;
-      color: white;
+      color:black;
       font-weight: bold;
       font-size: 20px;
       border-radius: 0 3px 3px 0;
@@ -123,9 +123,7 @@
         <h1 class="fs-4 text-white mb-0">
           오늘은 여기서 한잔어때?
         </h1>
-        <a href="category.html" class="ms-auto link-light" hreflang="ar"
-          >HomePage</a
-        >
+        <a href="http://127.0.0.1:5500/index.html" class="ms-auto link-light" hreflang="ar" >HomePage</a>
       </div>
     </header>
     <div class="container">
@@ -358,7 +356,25 @@
       <!--지도 넣는칸-->
       <!--지도 html받는법-> 카카오맵에서 장소검색후 공유버튼 클릭->html태그복사 클릭후 여기서부터 지우고 붙여넣기**지도 가로세로넓이300으로맞추기-->
 
+<!-- * 카카오맵 - 지도퍼가기 -->
+<!-- 1. 지도 노드 -->
+<div id="daumRoughmapContainer1663980134005" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
+<!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+<!-- 3. 실행 스크립트 -->
+<script charset="UTF-8">
+	new daum.roughmap.Lander({
+		"timestamp" : "1663980134005",
+		"key" : "2btef",
+		"mapWidth" : "300",
+		"mapHeight" : "300"
+	}).render();
+</script>
 
 
 <!--지도스크립트 끝-->

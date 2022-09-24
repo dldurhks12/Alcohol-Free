@@ -17,7 +17,12 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script></head
-  ><!--부트스트랩-->
+  ><!--부트스트랩--><style>
+    body {
+      background-color: white;
+    }
+  </style>
+
   <style>
     body {
       font-family: Arial;
@@ -56,7 +61,7 @@
       width: auto;
       padding: 16px;
       margin-top: -50px;
-      color: white;
+      color:  black;
       font-weight: bold;
       font-size: 20px;
       border-radius: 0 3px 3px 0;
@@ -123,9 +128,7 @@
         <h1 class="fs-4 text-white mb-0">
           오늘은 여기서 한잔어때?
         </h1>
-        <a href="category.html" class="ms-auto link-light" hreflang="ar"
-          >HomePage</a
-        >
+        <a href="http://127.0.0.1:5500/index.html" class="ms-auto link-light" hreflang="ar" >HomePage</a>
       </div>
     </header>
     <div class="container">
@@ -357,10 +360,9 @@
 
       <!--지도 넣는칸-->
       <!--지도 html받는법-> 카카오맵에서 장소검색후 공유버튼 클릭->html태그복사 클릭후 여기서부터 지우고 붙여넣기**지도 가로세로넓이300으로맞추기-->
-
 <!-- * 카카오맵 - 지도퍼가기 -->
 <!-- 1. 지도 노드 -->
-<div id="daumRoughmapContainer1663654085533" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+<div id="daumRoughmapContainer1663981887800" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
 <!--
 	2. 설치 스크립트
@@ -371,13 +373,12 @@
 <!-- 3. 실행 스크립트 -->
 <script charset="UTF-8">
 	new daum.roughmap.Lander({
-		"timestamp" : "1663654085533",
-		"key" : "2brn6",
+		"timestamp" : "1663981887800",
+		"key" : "2bteh",
 		"mapWidth" : "300",
 		"mapHeight" : "300"
 	}).render();
 </script>
-
 
 <!--지도스크립트 끝-->
       
